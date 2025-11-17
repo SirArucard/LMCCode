@@ -1,6 +1,6 @@
 import java.util.Scanner;
-
-public class LMC {
+    // Classe principal do código
+public class Main {
     public static void main(String[] args) {
         imprimeTitulo();
         int[] numeros = recebeNum();
@@ -8,6 +8,7 @@ public class LMC {
         System.out.println("O MMC dos números informados é: " + resultadoMmc);
 
         }
+        // Classe que imprime um menuzinho na tela
     public static void imprimeTitulo(){
         
         System.out.println("===============================================");
@@ -17,6 +18,7 @@ public class LMC {
         System.out.println("===============================================");
         System.out.println("===============================================");
     }
+        // Classe que pede a quantidade de numeros que o usuário quer fazer o MMC, calculando o tamanho do array 
     public static int[] recebeNum(){
         Scanner entrada = new Scanner(System.in);
         System.out.println("De quantos numeros você quer tirar o MMC?");
@@ -31,6 +33,7 @@ public class LMC {
         return numeros;
         
     }
+        // Aqui executamos a raiz da questão, testando valor por valor do array com numeros primos
     public static int executaMDC(int[] numeros){
         int totalMmc = 1;
         int divPrimo = 2;
@@ -52,7 +55,7 @@ public class LMC {
             }
             return totalMmc;
         }
-
+        // Classe que serve apenas pra ser usada no while do código principal e parar de rodar quando todos numeros são 1 no array
     public static boolean SaoUm(int[] numeros) {
     for (int i = 0; i < numeros.length; i++) {
         if (numeros[i] != 1) {
@@ -61,7 +64,7 @@ public class LMC {
     }
     return true;
     }
-
+        // Impressão na tela bonitinha do macete, pelo menos é assim que o Marcos chama
     public static void imprimeMacete(int[] numeros, int divisor) {
         for (int i = 0; i < numeros.length; i++) {
             System.out.print(numeros[i] + " ");
