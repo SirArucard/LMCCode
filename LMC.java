@@ -11,6 +11,7 @@ public class LMC {
     public static void imprimeTitulo(){
         
         System.out.println("===============================================");
+        System.out.println("===============================================");
         System.out.println("Bem vindo ao calculo de MMC!");
         System.out.println("Aqui voceh poderah calcular o MMC entre n numeros");
         System.out.println("===============================================");
