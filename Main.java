@@ -24,7 +24,6 @@ public class Main {
         // Ela pede ao usuário a quantidade de numeros e guarda esse valor numa variável que será lida como quantos numeros nosso array terá
         // Depois disso criamos um for que passa e armazena cada valor que será usado para o MMC em uma posição diferente (Os indices)
     public static int[] recebeNum(){
-    public static int[] recebeNum(){
     Scanner entrada = new Scanner(System.in);
     System.out.println("De quantos numeros você quer tirar o MMC?");
     int tamDoArray = entrada.nextInt();
