@@ -24,19 +24,31 @@ public class Main {
         // Ela pede ao usuário a quantidade de numeros e guarda esse valor numa variável que será lida como quantos numeros nosso array terá
         // Depois disso criamos um for que passa e armazena cada valor que será usado para o MMC em uma posição diferente (Os indices)
     public static int[] recebeNum(){
-        Scanner entrada = new Scanner(System.in);
-        System.out.println("De quantos numeros você quer tirar o MMC?");
-        int tamDoArray = entrada.nextInt();
-        int [] numeros = new int[tamDoArray];
-        for (int i = 0; i < tamDoArray; i++) {
-            System.out.println("Beleza, agora digita o " + (i+1) + "º número: ");
-            numeros[i] = entrada.nextInt();
-        }
-        System.out.println("Show, agora vamos resolver o MMC");
-
-        return numeros;
+    public static int[] recebeNum(){
+    Scanner entrada = new Scanner(System.in);
+    System.out.println("De quantos numeros você quer tirar o MMC?");
+    int tamDoArray = entrada.nextInt();
+    int [] numeros = new int[tamDoArray];
+    
+    for (int i = 0; i < tamDoArray; i++) {
+        int valorLido = 0;
         
+        // Proteção: Enquanto o valor for menor ou igual a 0, repete a pergunta
+        while (valorLido <= 0) {
+            System.out.println("Beleza, agora digita o " + (i+1) + "º número:");
+            valorLido = entrada.nextInt();
+            
+            if (valorLido <= 0) {
+                System.out.println("Zero nao vai ta rolando, escreve um numero inteiro");
+            }
+        }
+        numeros[i] = valorLido;
     }
+    System.out.println("Show, agora vamos resolver o MMC");
+
+    return numeros;
+}
+
         // Aqui executamos a raiz da questão, testando valor por valor do array com numeros primos
         // Declaramos duas variáveis, uma pra guardar o valor total do MMC e uma que será o divisor primo
         // Criamos um while que tem como parametro a NEGAÇÃO (!) da função SaoUm, que será explicada lá na linha dela
